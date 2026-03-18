@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<title>Geophysical Flows</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+<div class="container nav">
+<a href="../index.html">Home</a>
+<a href="../research.html">Research Topics</a>
+<a href="../publications.html">Publications</a>
+<a href="../teaching.html">Teaching and Supervision</a>
+<a href="../talks.html">Talks</a>
+<a href="../assets/CV_Orlando_Giuseppe_EN.pdf">CV</a>
+</div>
+</nav>
+
+<section class="container">
+
+<h2 class="section-title">Geophyisical Flows</h2>
+
+<figure>
+  <video class="banner" autoplay muted loop playsinline poster="../assets/images/u_prime_0.png" id="banner-video">
+    <source src="../assets/videos/TREX.mp4" type="video/mp4">
+  </video>
+  <figcaption>
+    Terrain-Induced Rotor Experiment (T-REX) mountain wave, Sierra profile. Data from
+    <a href="https://doi.org/10.1002/qj.4839" target="_blank" rel="noopener noreferrer">[OBB24a]</a>
+  </figcaption>
+</figure>
+<p>
+My research in geophysical flows focuses on atmospheric dynamics, with applications to numerical weather prediction (<b>NWP</b>) and flows over complex orography,
+and shallow water equations (<b>SWE</b>).
+In particular, I develop high-order discontinuous Galerkin (<b>DG</b>) methods combined with adaptive mesh refinement (<b>AMR</b>) techniques,
+ensuring robustness and efficiency in realistic simulations. Notably, for the first time in the literature in this context,
+I have employed for flows over orography:
+<ul>
+  <li>non-conforming meshes <a href="https://doi.org/10.1002/qj.4839" target="_blank" rel="noopener noreferrer">[OBB24a]</a>;</li>
+  <li>curved elements <a href="https://doi.org/10.1016/j.jcp.2024.113445" target="_blank" rel="noopener noreferrer">[OBB24b]</a>,</li>
+</ul>
+which have shown to improve the performance of high-fidelity simulations over complex terrains.
+<p>
+For what concerns the SWE, I investigated the interplay between model formulation, topography treatment, and numerical discretization. In
+particular, the approach proposed in <a href="https://arxiv.org/abs/2505.18743" target="_blank" rel="noopener noreferrer">[Arp+25]</a>
+allows for the use of realistic bathymetric data without requiring any regularity assumptions.
+These studies naturally extend to other geophysical flow applications, in particular to lava flow modelling
+<a href="https://arxiv.org/abs/2509.09460" target="_blank" rel="noopener noreferrer">[GO25]</a>.
+In this context, a depth-integrated model is adopted, which can be interpreted as a modification of the classical SWE.
+
+<h3>Related Publications</h3>
+
+<ul>
+  <li>
+  [OBB23] <b>G. Orlando</b>, T. Benacchio, and L. Bonaventura.
+  “An IMEX-DG solver for atmospheric dynamics simulations with adaptive mesh refinement”.
+  Journal of Computational and Applied Mathematics 427 (2023), p. 115124.
+  doi: <a href="https://doi.org/10.1016/j.cam.2023.115124" target="_blank" rel="noopener noreferrer">10.1016/j.cam.2023.115124<a>.
+  </li>
+  <li>
+  [OBB24a] <b>G. Orlando</b>, T. Benacchio, and L. Bonaventura.
+  “Robust and accurate simulations of flows over orography using non-conforming meshes”.
+  Quarterly Journal of the Royal Meteorological Society 150 (2024), pp. 4750-4770.
+  doi: <a href="https://doi.org/10.1002/qj.4839" target="_blank" rel="noopener noreferrer">10.1002/qj.4839<a>.
+  </li>
+  <li>
+  [OBB24b] <b>G. Orlando</b>, T. Benacchio, and L. Bonaventura.
+  “Impact of curved elements for flows over orography with a Discontinuous Galerkin scheme”.
+  Journal of Computational Physics 519 (2024), p. 113445.
+  doi: <a href="https://doi.org/10.1016/j.jcp.2024.113445" target="_blank" rel="noopener noreferrer">10.1016/j.jcp.2024.113445<a>.
+  </li>
+  <li>
+  [OBB25a] <b>G. Orlando</b>, T. Benacchio, and L. Bonaventura.
+  “Efficient and scalable atmospheric dynamics simulations using non-conforming meshes”.
+  Procedia Computer Science 255 (2025), pp. 33-42. Proceedings of the <b><span style="color: #a80000;">Second EuroHPC Day</span></b>.
+  doi: <a href="https://doi.org/10.1016/j.procs.2025.02.258" target="_blank" rel="noopener noreferrer">10.1016/j.procs.2025.02.258<a>.
+  </li>
+  [OBB25b] <b>G. Orlando</b>, T. Benacchio, and L. Bonaventura.
+  “Improving the scalability of a high-order atmospheric dynamics solver based on the <code>deal.II</code> library”.
+  Procedia Computer Science 267 (2025), pp. 227–236. Proceedings of the <b><span style="color: #a80000;">Third EuroHPC Day</span></b>.
+  doi: <a href="https://doi.org/10.1016/j.procs.2025.08.249" target="_blank" rel="noopener noreferrer">10.1016/j.procs.2025.08.249<a>.
+  </li>
+  <li>
+  [Arp+25] L. Arpaia, <b>G. Orlando</b>, C. Ferrarin, and L. Bonavetura.
+  “A high-order matrix-free adaptive solver for the shallow water equations with irregular bathymetry”. 2025.
+  <a href="https://arxiv.org/abs/2505.18743" target="_blank" rel="noopener noreferrer">arXiv: 2505.18743 [cs.CE]<a>.
+  </li>
+  <li>
+  [GO25] F. Gatti and <b>G. Orlando</b>.
+  “Second-order Optimally Stable IMEX (pseudo-)staggered Galerkin discretization: application to lava flow modeling”. 2025.
+  <a href="https://arxiv.org/abs/2509.09460" target="_blank" rel="noopener noreferrer">arXiv: 2509.09460 [math.NA]<a>.
+  </li>
+</ul>
+
+</section>
+
+<script>
+const video = document.getElementById('banner-video');
+video.addEventListener('ended', () => {
+  setTimeout(() => video.play(), 1000);
+});
+</script>
+
+</body>
+
+</html>

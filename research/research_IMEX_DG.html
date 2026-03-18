@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<title>IMEX-DG methods & Low Mach Flows</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+<div class="container nav">
+<a href="../index.html">Home</a>
+<a href="../research.html">Research Topics</a>
+<a href="../publications.html">Publications</a>
+<a href="../teaching.html">Teaching and Supervision</a>
+<a href="../talks.html">Talks</a>
+<a href="../assets/CV_Orlando_Giuseppe_EN.pdf">CV</a>
+</div>
+</nav>
+
+<section class="container">
+
+<h2 class="section-title">IMEX-DG methods & Low Mach Flows</h2>
+
+<figure>
+  <video class="banner" autoplay muted playsinline poster="../assets/images/Ideal_gas_long_0000.png" id="banner-video">
+    <source src="../assets/videos/cold_bubble.mp4" type="video/mp4">
+  </video>
+  <figcaption>
+    Cold bubble, potential temperature deviation. Data from
+    <a href="https://doi.org/10.1016/j.jcp.2022.111653" target="_blank" rel="noopener noreferrer">[OBB22]</a>
+  </figcaption>
+</figure>
+<p>
+Most of my work builds on a coherent computational framework based on:
+<ul>
+  <li>
+  discontinuous Galerkin (<b>DG</b>) finite element discretizations, offering high-order accuracy, local conservation, and flexibility;
+  </li>
+  <li>
+  Implicit–Explicit (<b>IMEX</b>) Runge-Kutta time integrators, designed to efficiently handle stiff relaxation terms and multiscale dynamics.
+  </li>
+</ul>
+Adaptive Mesh Refinement (<b>AMR</b>) has been employed in conjunction with the DG spatial discretization to locally increase resolution where required.
+<p>
+During my research activity, I have mainly focused on the field of Computational Fluid Dynamics
+(CFD), spanning a wide range of applications. This work started with my Master’s thesis in 2019,
+which was devoted to the development of a numerical solver for multicomponent reactive flows, with
+a particular emphasis on approaches that remain robust in the presence of vanishing species
+<a href="https://hdl.handle.net/10589/150021" target="_blank" rel="noopener noreferrer">[Orl19]<a>.
+<p>
+My first publication in 2022
+<a href="https://doi.org/10.1002/fld.5098" target="_blank" rel="noopener noreferrer">[Orl+22]<a>
+concerns the development of an efficient numerical scheme for the incompressible Navier-Stokes equations.
+The proposed approach combines flexible discontinuous finite element space discretizations
+with efficient implicit time integration methods and employs an artificial compressibility formulation
+in order to overcome well-known limitations of projection methods. The solver is included in the official deal.II code gallery
+<a href="https://dealii.org/developer/doxygen/deal.II/code_gallery_NavierStokes_TRBDF2_DG.html" target="_blank" rel="noopener noreferrer">
+(https://dealii.org/developer/doxygen/deal.II/code_gallery_NavierStokes_TRBDF2_DG.html)<a>.
+<p>
+Building upon this initial work, a first major methodological contribution is presented in
+<a href="https://doi.org/10.1016/j.jcp.2022.111653" target="_blank" rel="noopener noreferrer">[OBB22]<a>.
+In this study, IMEX approaches originally developed for ideal gases are extended in a non-trivial way
+to the compressible Navier-Stokes equations with real gas equations of state, including general
+cubic equations of state. A tailored fixed point iteration is introduced for the treatment of cubic
+equations of state, enabling the robust use of experimental thermodynamic data. The resulting IMEX-DG
+scheme is particulary well-suited for <b>low Mach</b> flows, achieves full second-order accuracy,
+and is accompanied by an analysis of the employed IMEX-RK method, leading to improved absolute monotonicity properties.
+Furthermore, refinement indicators specifically designed for non-ideal gases are introduced,
+allowing for an effective use of AMR in thermodynamically complex regimes.
+<p>
+From a more mathematical perspective, I have analyzed the asymptotic-preserving (<b>AP</b>)
+properties of a general class of IMEX-RK methods for the Euler equations
+<a href="https://doi.org/10.1016/j.jcp.2025.113889" target="_blank" rel="noopener noreferrer">[OB25]<a>.
+This analysis allows one to rigorously characterize the behaviour of the schemes in the low Mach number regime and to
+validate higher-order AP methods, extending those previously introduced in
+<a href="https://doi.org/10.1016/j.jcp.2022.111653" target="_blank" rel="noopener noreferrer">[OBB22]<a>.
+The analysis is carried out for a general equation of state and considers both single-scale and two-scale asymptotic
+regimes, with particular attention devoted to the impact of boundary conditions in the asymptotic
+analysis. A quantitative comparison with other AP time integrators is proposed in
+<a href="https://doi.org/10.1016/j.cma.2025.118037" target="_blank" rel="noopener noreferrer">[OBR25]<a>.,
+where the stiff dependence of the schemes is carefully analyzed in order to avoid the solution
+of nonlinear pressure equations for general equations of state.
+
+<h3>Related Publications</h3>
+
+<ul>
+  <li>
+  [Orl19] <b>G. Orlando</b>.
+  "Development of a reactive numerical solver based on the <code>SU2 CFD</code> code".
+  <a href="https://hdl.handle.net/10589/150021" target="_blank" rel="noopener noreferrer">https://hdl.handle.net/10589/150021<a>.
+  Master Thesis, Politecnico di Milano, 2019.
+  </li>
+  <li>
+  [Orl+22] <b>G. Orlando</b>, A. Della Rocca, P.F. Barbante, L. Bonaventura, and N. Parolini.
+  “An efficient and accurate implicit DG solver for the incompressible Navier–Stokes equations”.
+  International Journal for Numerical Methods in Fluids 94 (2022), pp. 1484-1516.
+  doi: <a href="https://doi.org/10.1002/fld.5098" target="_blank" rel="noopener noreferrer">10.1002/fld.5098<a>.
+  </li>
+  <li>
+  [OBB22] <b>G. Orlando</b>, P.F. Barbante, and L. Bonaventura.
+  “An efficient IMEX-DG solver for the compressible Navier-Stokes equations for non-ideal gases”.
+  Journal of Computational Physics 471 (2022), p. 111653.
+  doi: <a href="https://doi.org/10.1016/j.jcp.2022.111653" target="_blank" rel="noopener noreferrer">10.1016/j.jcp.2022.111653<a>.
+  </li>
+  <li>
+  [OB25] <b>G. Orlando</b> and L. Bonaventura.
+  “Asymptotic-preserving IMEX schemes for the Euler equations of non-ideal gases”.
+  Journal of Computational Physics 529 (2025), p. 113889.
+  doi: <a href="https://doi.org/10.1016/j.jcp.2025.113889" target="_blank" rel="noopener noreferrer">10.1016/j.jcp.2025.113889<a>.
+  </li>
+  <li>
+  [OBR25] <b>G. Orlando</b>, S. Boscarino, and G. Russo.
+  “A quantitative comparison of high-order asymptotic-preserving and asymptotically-accurate IMEX methods for the Euler equations with non-ideal gases”.
+  Computer Methods in Applied Mechanics and Engineering 442 (2025), p. 118037.
+  doi: <a href="https://doi.org/10.1016/j.cma.2025.118037" target="_blank" rel="noopener noreferrer">10.1016/j.cma.2025.118037<a>.
+  </li>
+</ul>
+
+</section>
+
+<script>
+const video = document.getElementById('banner-video');
+video.addEventListener('ended', () => {
+  setTimeout(() => video.play(), 1000);
+});
+</script>
+
+</body>
+
+</html>

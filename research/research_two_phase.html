@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<title>Two-Phase Flows</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+<div class="container nav">
+<a href="../index.html">Home</a>
+<a href="../research.html">Research Topics</a>
+<a href="../publications.html">Publications</a>
+<a href="../teaching.html">Teaching and Supervision</a>
+<a href="../talks.html">Talks</a>
+<a href="../assets/CV_Orlando_Giuseppe_EN.pdf">CV</a>
+</div>
+</nav>
+
+<section class="container">
+
+<h2 class="section-title">Two-Phase Flows</h2>
+
+<figure>
+  <video class="banner" autoplay muted playsinline poster="../assets/images/alpha_l_alpha_d_0000.png" id="banner-video">
+    <source src="../assets/videos/liquid_column.mp4" type="video/mp4">
+  </video>
+  <figcaption>
+    Two-phase two-scale model with inter-scale mass transfer, liquid column test case.
+  </figcaption>
+</figure>
+<p>
+Two-phase flow modelling and simulation currently represent my main research axis, which originated
+with my PhD thesis <a href="https://hdl.handle.net/10589/198599" target="_blank" rel="noopener noreferrer">[Orl23]</a>.
+My contributions address both the mathematical formulation of novel models
+and the development of suitable numerical methods.
+<p>
+During my PhD, I focused on incorporating geometric quantities that play a key role in interfacial dynamics, such as:
+<ul>
+  <li>
+  the interfacial area density, whose accurate evaluation is a prerequisite for reliable phase exchange terms
+  <a href="https://doi.org/10.1016/j.ijmultiphaseflow.2023.104617" target="_blank" rel="noopener noreferrer">[OBB23]</a>, and
+  </li>
+  <li>
+  the mean curvature of the interface, investigated from both modelling and numerical perspectives
+  <a href="https://doi.org/10.1007/978-3-031-86169-7_22" target="_blank" rel="noopener noreferrer">[OBB25]</a>.
+  </li>
+</ul>
+In addition, I developed an extension of the numerical method originally designed for incompressible
+single-phase flows to two-phase flow configurations
+<a href="https://doi.org/10.1002/fld.5328" target="_blank" rel="noopener noreferrer">[Orl24]</a>.
+<p>
+More recently, I have been working on the analysis of a hierarchy of Baer-Nunziato-type models
+for compressible two-phase flows
+<a href="https://arxiv.org/abs/2509.26284" target="_blank" rel="noopener noreferrer">[Orl+25]</a>.
+The objective of this work is to clarify the mathematical and numerical implications arising
+from the use of models that are not well posed in the classical sense, in particular due to the
+non-uniqueness of jump conditions associated with non-conservative products.
+<p>
+In parallel, a significant part of my current research is devoted to the derivation of two-phase flow
+models based on variational principles. While this framework was originally proposed for single-phase
+flows, with applications to the Euler-Fourier system
+<a href="https://doi.org/10.1051/proc/202578080" target="_blank" rel="noopener noreferrer">[Hae+25a]</a>,
+it finds its most powerful application in the analysis of two-phase flows
+<a href="https://hal.science/hal-05224712" target="_blank" rel="noopener noreferrer">[Hae+25b]</a>,
+<a href="https://doi.org/10.1098/rspa.2025.0835" target="_blank" rel="noopener noreferrer">[Hae+26]</a>.
+In particular, in <a href="https://doi.org/10.1098/rspa.2025.0835" target="_blank" rel="noopener noreferrer">[Hae+26]</a>,
+a novel multi-fluid model for compressible two-phase flows is proposed.
+The model is fully closed and introduces a new interfacial quantity,referred to as the interfacial work.
+The closures for the interfacial quantities are derived directly from the variational principle,
+ensuring physical consistency and well-defined behaviour across all flow topologies.
+The resulting system is shown to be hyperbolic, symmetrizable, and to admit an
+entropy conservation law. Moreover, its non-conservative products lead to uniquely defined jump
+conditions. A web page presenting relevant test cases can be found at
+<a href="https://hpc-maths.github.io/2025_09_two_fluid_all_topology/" target="_blank" rel="noopener noreferrer">
+https://hpc-maths.github.io/2025_09_two_fluid_all_topology/</a>.
+<p>
+Finally, I am currently working on the development of unified multiscale models with mass transfer
+for two-phase flows. This approach aims at providing a unified and mathematically sound framework
+ensuring thermodynamic consistency, well-defined energy balances, and a clear interpretation of the
+inter-scale transfer terms (see animation).
+
+<h3>Related Publications</h3>
+
+<ul>
+  <li>
+  [Orl23] <b>G. Orlando</b>.
+  "Modelling and simulations of two-phase flows including geometric variables".
+  <a href="https://hdl.handle.net/10589/198599" target="_blank" rel="noopener noreferrer">https://hdl.handle.net/10589/198599<a>.
+  PhD Thesis, Politecnico di Milano, 2023.
+  </li>
+  <li>
+  [OBB23] <b>G. Orlando</b>, P.F. Barbante, and L. Bonaventura.
+  “On the evolution equations of interfacial variables in two-phase flows”.
+  International Journal of Multiphase Flow 169 (2023), p. 104617.
+  doi: <a href="https://doi.org/10.1016/j.ijmultiphaseflow.2023.104617" target="_blank" rel="noopener noreferrer">
+       10.1016/j.ijmultiphaseflow.2023.104617<a>.
+  </li>
+  <li>
+  [Orl24] <b>G. Orlando</b>.
+  “An implicit DG solver for incompressible two-phase flows with an artificial compressibility formulation”.
+  International Journal for Numerical Methods in Fluids 96 (2024), pp. 1932-1959.
+  doi: <a href="https://doi.org/10.1002/fld.5328" target="_blank" rel="noopener noreferrer">10.1002/fld.5328<a>.
+  Preprint: <a href="https://arxiv.org/abs/2307.04580" target="_blank" rel="noopener noreferrer">arXiv: 2307.04580<a>.
+  </li>
+  <li>
+  [OBB25] <b>G. Orlando</b>, P.F. Barbante, and L. Bonaventura.
+  “Assessment of Different Strategies to Compute Surface Tension Contribution”.
+  <b><span style="color: #a80000;">Numerical Mathematics and Advanced Applications ENUMATH 2023,
+  Volume 2: European Conference, September 4-8, Lisbon, Portugal</span></b>.
+  Vol. 154. Springer Nature. 2025, pp. 213–222.
+  doi: <a href="https://doi.org/10.1007/978-3-031-86169-7_22" target="_blank" rel="noopener noreferrer">10.1007/978-3-031-86169-7_22<a>.
+  Preprint: <a href="https://arxiv.org/abs/2402.04670" target="_blank" rel="noopener noreferrer">arXiv: 2402.04670<a>.
+  </li>
+  <li>
+  [Orl+25] <b>G. Orlando</b>, W. Haegeman, M. Pelanti, and M. Massot.
+  “A robust computational framework for the mixture-energy-consistent six-equation two-phase model with instantaneous mechanical relaxation terms”. 2025.
+  <a href="https://arxiv.org/abs/2509.26284" target="_blank" rel="noopener noreferrer">arXiv: 2509.26284 [math.NA]<a>.
+  </li>
+  <li>
+  [Hae+25a] W. Haegeman, S. Kokh, M. Massot, <b>G. Orlando</b>.
+  “A generic framework to derive systems of conservation laws with source terms and its application to heat conduction in fluid flows:
+  An alternative to the method of moments in kinetic theory of gases?”.
+  ESAIM: Proceedings and Surveys 78 (2025), pp. 80–97.
+  Proceedings of the <b><span style="color: #a80000;">Sixth Workshop on Compressible Multiphase Flows: Derivation, Closure laws, Thermodynamics</span></b>.
+  doi: <a href="https://doi.org/10.1051/proc/202578080" target="_blank" rel="noopener noreferrer">10.1051/proc/202578080<a>.
+  </li>
+  <li>
+  [Hae+25b] W. Haegeman, <b>G. Orlando</b>, S. Kokh, and M. Massot.
+  “Modelling of relative velocity, velocity fluctuations and their interactions for two-fluid models by Stationary Action Principle”. 2025.
+  <a href="https://hal.science/hal-05224712" target="_blank" rel="noopener noreferrer">HAL-05224712<a>.
+  </li>
+  <li>
+  [Hae+26] W. Haegeman, <b>G. Orlando</b>, S. Kokh, and M. Massot.
+  “An all-topology two-fluid model for two-phase flows derived through Hamilton’s Stationary Action Principle”.
+  Proceedings of the Royal Society A 482 (2026), p. 20250835.
+  doi: <a href="https://doi.org/10.1098/rspa.2025.0835" target="_blank" rel="noopener noreferrer">10.1098/rspa.2025.0835<a>.
+  </li>
+</ul>
+
+</section>
+
+<script>
+const video = document.getElementById('banner-video');
+video.addEventListener('ended', () => {
+  setTimeout(() => video.play(), 1000);
+});
+</script>
+
+</body>
+
+</html>

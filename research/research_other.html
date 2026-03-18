@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Other</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+<div class="container nav">
+<a href="../index.html">Home</a>
+<a href="../research.html">Research Topics</a>
+<a href="../publications.html">Publications</a>
+<a href="../teaching.html">Teaching and Supervision</a>
+<a href="../talks.html">Talks</a>
+<a href="../assets/CV_Orlando_Giuseppe_EN.pdf">CV</a>
+</div>
+</nav>
+
+<section class="container">
+
+<h2 class="section-title">Other</h2>
+
+<figure>
+  <video class="banner" autoplay muted loop playsinline poster="../assets/images/SBR_0000.png" id="banner-video">
+    <source src="../assets/videos/SBR.mp4" type="video/mp4">
+  </video>
+  <figcaption>
+    Solib body rotation with filtering monotonization technique. Data from
+    <a href="https://doi.org/10.1016/j.camwa.2022.11.017" target="_blank" rel="noopener noreferrer">[Orl23a]</a>
+  </figcaption>
+</figure>
+<p>
+Alongside the core research axes, I developed a filtering monotonization technique
+<a href="https://doi.org/10.1016/j.camwa.2022.11.017" target="_blank" rel="noopener noreferrer">[Orl23a]</a>
+in order to avoid (or at least reduce) the oscillations that arise when high-order discretization methods are used.
+Its potentialities have been shown in a number of benchmarks, including test cases for the Euler equations of gas dynamics.
+<p>
+More recently, my numerical investigations have also focused on Multi-Resolution (<b>MR</b>) techniques
+<a href="https://arxiv.org/abs/2509.26284" target="_blank" rel="noopener noreferrer">[Orl25+]</a>.
+within a Finite-Volume context, enabling dynamic adaptation and error control based on wavelet decompositions.
+<p>
+I also investigated for the first time in the literature the use of large language models (<b>LLMs</b>)
+to assist the construction of finite element solvers for PDEs
+<a href="https://doi.org/10.1615/JMachLearnModelComput.2023049326" target="_blank" rel="noopener noreferrer">[Orl23b]</a>.
+While exploratory in nature, this work opens new directions at the interface between numerical analysis, software design, and artificial intelligence.
+<p>
+Current preliminary research directions include Reduced Order Models (<b>ROMs</b>) and Machine Learning (<b>ML</b>) techniques,
+with the goal of properly embedding these approaches in full-order discretizations in a hybrid paradigm,
+so as to enhance efficiency without losing accuracy, in the spirit of Scientific Machine Learning (SciML).
+
+<h3>Related Publications</h3>
+
+<ul>
+  <li>
+  [Orl23a] <b>G. Orlando</b>.
+  “A filtering monotonization approach for DG discretizations of hyperbolic problems”.
+  Computers & Mathematics with Applications 129 (2023), pp. 113-125.
+  Preprint: <a href="https://arxiv.org/abs/2204.08693" target="_blank" rel="noopener noreferrer">arXiv: 2204.08693<a>.
+  doi: <a href="https://doi.org/10.1016/j.camwa.2022.11.017" target="_blank" rel="noopener noreferrer">10.1016/j.camwa.2022.11.017<a>.
+  </li>
+  <li>
+  [Orl23b] <b>G. Orlando</b>.
+  “Assessing ChatGPT for coding finite element methods”.
+  Journal of Machine Learning for Modeling and Computing 4 (2023), pp. 135-171.
+  doi: <a href="https://doi.org/10.1615/JMachLearnModelComput.2023049326" target="_blank" rel="noopener noreferrer">
+       10.1615/JMachLearnModelComput.2023049326<a>
+  </li>
+  <li>
+  [Orl25+] <b>G. Orlando</b>, W. Haegeman, M. Pelanti, and M. Massot.
+  “A robust computational framework for the mixture-energy-consistent six-equation two-phase model with instantaneous mechanical relaxation terms”. 2025.
+  <a href="https://arxiv.org/abs/2509.26284" target="_blank" rel="noopener noreferrer">arXiv: 2509.26284 [math.NA]<a>.
+  </li>
+</ul>
+
+</section>
+
+<script>
+const video = document.getElementById('banner-video');
+video.addEventListener('ended', () => {
+  setTimeout(() => video.play(), 1000);
+});
+</script>
+
+</body>
+
+</html>
