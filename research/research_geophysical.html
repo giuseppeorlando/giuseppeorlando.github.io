@@ -34,16 +34,21 @@
   </figcaption>
 </figure>
 <p>
-My research in geophysical flows focuses on atmospheric dynamics, with applications to numerical weather prediction (<b>NWP</b>) and flows over complex orography,
-and shallow water equations (<b>SWE</b>).
+My research in geophysical flows focuses on atmospheric dynamics, with applications to numerical weather prediction (<b>NWP</b>) and flows over complex orography
+<a href="https://doi.org/10.1016/j.cam.2023.115124" target="_blank" rel="noopener noreferrer">[OBB23]</a>,
+<a href="https://arxiv.org/abs/2605.29598" target="_blank" rel="noopener noreferrer">[Bot+26]</a>,
+and shallow water equations (<b>SWE</b>) <a href="https://arxiv.org/abs/2505.18743" target="_blank" rel="noopener noreferrer">[Arp+25]</a>,.
 In particular, I develop high-order discontinuous Galerkin (<b>DG</b>) methods combined with adaptive mesh refinement (<b>AMR</b>) techniques,
 ensuring robustness and efficiency in realistic simulations. Notably, for the first time in the literature in this context,
 I have employed for flows over orography:
 <ul>
-  <li>non-conforming meshes <a href="https://doi.org/10.1002/qj.4839" target="_blank" rel="noopener noreferrer">[OBB24a]</a>;</li>
+  <li>non-conforming meshes <a href="https://doi.org/10.1002/qj.4839" target="_blank" rel="noopener noreferrer">[OBB24a]</a>,
+                            <a href="https://arxiv.org/abs/2605.29598" target="_blank" rel="noopener noreferrer">[Bot+26]</a>;</li>
   <li>curved elements <a href="https://doi.org/10.1016/j.jcp.2024.113445" target="_blank" rel="noopener noreferrer">[OBB24b]</a>,</li>
 </ul>
 which have shown to improve the performance of high-fidelity simulations over complex terrains.
+Recent work has focused on extending these techniques to rotating flows
+<a href="https://arxiv.org/abs/2605.29598" target="_blank" rel="noopener noreferrer">[Bot+26]</a>.
 <p>
 For what concerns the SWE, I investigated the interplay between model formulation, topography treatment, and numerical discretization. In
 particular, the approach proposed in <a href="https://arxiv.org/abs/2505.18743" target="_blank" rel="noopener noreferrer">[Arp+25]</a>
@@ -86,13 +91,18 @@ In this context, a depth-integrated model is adopted, which can be interpreted a
   </li>
   <li>
   [Arp+25] L. Arpaia, <b>G. Orlando</b>, C. Ferrarin, and L. Bonavetura.
-  “A high-order matrix-free adaptive solver for the shallow water equations with irregular bathymetry”. 2025.
+  “High-order adaptive discontinuous finite elements for the shallow water equations with sub-grid irregular bathymetry”. 2026.
   <a href="https://arxiv.org/abs/2505.18743" target="_blank" rel="noopener noreferrer">arXiv: 2505.18743 [cs.CE]<a>.
   </li>
   <li>
   [GO25] F. Gatti and <b>G. Orlando</b>.
-  “Second-order Optimally Stable IMEX (pseudo-)staggered Galerkin discretization: application to lava flow modeling”. 2025.
+  “Second-order optimally stable IMEX (pseudo-)staggered Galerkin discretization with application to depth-integrated lava flow simulations”. 2026.
   <a href="https://arxiv.org/abs/2509.09460" target="_blank" rel="noopener noreferrer">arXiv: 2509.09460 [math.NA]<a>.
+  </li>
+  <li>
+  [Bot+26] L. Bottani, T. Benacchio, <b>G. Orlando</b>, L. Bonaventura, and A.P. Engsip-Karup.
+  “An IMEX-DG solver with non-conforming mesh refinement for atmospheric dynamics with rotation”. 2026.
+  <a href="https://arxiv.org/abs/2605.29598" target="_blank" rel="noopener noreferrer">arXiv: 2605.29598 [math.NA]<a>.
   </li>
 </ul>
 

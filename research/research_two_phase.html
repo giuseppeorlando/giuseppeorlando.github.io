@@ -55,7 +55,7 @@ single-phase flows to two-phase flow configurations
 <p>
 More recently, I have been working on the analysis of a hierarchy of Baer-Nunziato-type models
 for compressible two-phase flows
-<a href="https://arxiv.org/abs/2509.26284" target="_blank" rel="noopener noreferrer">[Orl+25]</a>.
+<a href="https://arxiv.org/abs/2509.26284" target="_blank" rel="noopener noreferrer">[Orl+26]</a>.
 The objective of this work is to clarify the mathematical and numerical implications arising
 from the use of models that are not well posed in the classical sense, in particular due to the
 non-uniqueness of jump conditions associated with non-conservative products.
@@ -65,9 +65,9 @@ models based on variational principles. While this framework was originally prop
 flows, with applications to the Euler-Fourier system
 <a href="https://doi.org/10.1051/proc/202578080" target="_blank" rel="noopener noreferrer">[Hae+25a]</a>,
 it finds its most powerful application in the analysis of two-phase flows
-<a href="https://hal.science/hal-05224712" target="_blank" rel="noopener noreferrer">[Hae+25b]</a>,
-<a href="https://doi.org/10.1098/rspa.2025.0835" target="_blank" rel="noopener noreferrer">[Hae+26]</a>.
-In particular, in <a href="https://doi.org/10.1098/rspa.2025.0835" target="_blank" rel="noopener noreferrer">[Hae+26]</a>,
+<a href="https://hal.science/hal-05224712" target="_blank" rel="noopener noreferrer">[Hae+26a]</a>,
+<a href="https://doi.org/10.1098/rspa.2025.0835" target="_blank" rel="noopener noreferrer">[Hae+26b]</a>.
+In particular, in <a href="https://doi.org/10.1098/rspa.2025.0835" target="_blank" rel="noopener noreferrer">[Hae+26b]</a>,
 a novel multi-fluid model for compressible two-phase flows is proposed.
 The model is fully closed and introduces a new interfacial quantity,referred to as the interfacial work.
 The closures for the interfacial quantities are derived directly from the variational principle,
@@ -81,7 +81,9 @@ https://hpc-maths.github.io/2025_09_two_fluid_all_topology/</a>.
 Finally, I am currently working on the development of unified multiscale models with mass transfer
 for two-phase flows. This approach aims at providing a unified and mathematically sound framework
 ensuring thermodynamic consistency, well-defined energy balances, and a clear interpretation of the
-inter-scale transfer terms (see animation).
+inter-scale transfer terms <a href="https://hal.science/hal-05673253" target="_blank" rel="noopener noreferrer">[Hae+26d]</a>(see animation).
+The related code is freely accesible at <a href="https://hpc-maths.github.io/2026_06_two_scale_isothermal/" target="_blank" rel="noopener noreferrer">
+https://hpc-maths.github.io/2026_06_two_scale_isothermal/</a>.
 
 <h3>Related Publications</h3>
 
@@ -116,11 +118,6 @@ inter-scale transfer terms (see animation).
   Preprint: <a href="https://arxiv.org/abs/2402.04670" target="_blank" rel="noopener noreferrer">arXiv: 2402.04670<a>.
   </li>
   <li>
-  [Orl+25] <b>G. Orlando</b>, W. Haegeman, M. Pelanti, and M. Massot.
-  “A robust computational framework for the mixture-energy-consistent six-equation two-phase model with instantaneous mechanical relaxation terms”. 2025.
-  <a href="https://arxiv.org/abs/2509.26284" target="_blank" rel="noopener noreferrer">arXiv: 2509.26284 [math.NA]<a>.
-  </li>
-  <li>
   [Hae+25a] W. Haegeman, S. Kokh, M. Massot, <b>G. Orlando</b>.
   “A generic framework to derive systems of conservation laws with source terms and its application to heat conduction in fluid flows:
   An alternative to the method of moments in kinetic theory of gases?”.
@@ -129,15 +126,35 @@ inter-scale transfer terms (see animation).
   doi: <a href="https://doi.org/10.1051/proc/202578080" target="_blank" rel="noopener noreferrer">10.1051/proc/202578080<a>.
   </li>
   <li>
-  [Hae+25b] W. Haegeman, <b>G. Orlando</b>, S. Kokh, and M. Massot.
-  “Modelling of relative velocity, velocity fluctuations and their interactions for two-fluid models by Stationary Action Principle”. 2025.
-  <a href="https://hal.science/hal-05224712" target="_blank" rel="noopener noreferrer">HAL-05224712<a>.
+  [Hae+26a] W. Haegeman, <b>G. Orlando</b>, S. Kokh, and M. Massot.
+  “Modelling of relative velocity, velocity fluctuations and their interactions for two-fluid models by Stationary Action Principle”.
+  ESAIM: Proceedings and Surveys 78 (2026, in press).
+  Preprint: <a href="https://hal.science/hal-05224712" target="_blank" rel="noopener noreferrer">HAL-05224712<a>.
   </li>
   <li>
-  [Hae+26] W. Haegeman, <b>G. Orlando</b>, S. Kokh, and M. Massot.
+  [Hae+26b] W. Haegeman, <b>G. Orlando</b>, S. Kokh, and M. Massot.
   “An all-topology two-fluid model for two-phase flows derived through Hamilton’s Stationary Action Principle”.
   Proceedings of the Royal Society A 482 (2026), p. 20250835.
   doi: <a href="https://doi.org/10.1098/rspa.2025.0835" target="_blank" rel="noopener noreferrer">10.1098/rspa.2025.0835<a>.
+  </li>
+  <li>
+  [Orl+26] <b>G. Orlando</b>, W. Haegeman, M. Pelanti, and M. Massot.
+  “A robust computational framework for the mixture-energy-consistent six-equation two-phase model with instantaneous mechanical relaxation terms”.
+  Computers & Fluids 317 (2026), p. 107193.
+  doi: <a href="https://doi.org/10.1016/j.compfluid.2026.107193" target="_blank" rel="noopener noreferrer">10.1016/j.compfluid.2026.107193<a>.
+  </li>
+  <li>
+  [Hae+26c] W. Haegeman, <b>G. Orlando</b>, S. Kokh, and M. Massot.
+  “A Two-Phase Flow Model with Scale Separation for the Separated-to-Disperse Phase Transition” (2026), pp. 38-42.
+  Advances in Entry Systems Modeling: Modeling Summer Visit 2025 Technical Reports.
+  Ed. by Bruno Dias et al. Vol. TM-20260002490. NASA Technical Memorandum.
+  URL: <a href="https://ntrs.nasa.gov/citations/20260002490" target="_blank" rel="noopener noreferrer">https://ntrs.nasa.gov/citations/20260002490<a>.
+  doi: <a href="https://doi.org/10.64631/EPFF4875" target="_blank" rel="noopener noreferrer">10.64631/EPFF4875<a>.
+  </li>
+  <li>
+  [Hae+26d] W. Haegeman, <b>G. Orlando</b>, S. Kokh, and M. Massot.
+  “A two-scale two-phase flow model for the separate-to-disperse phase transition in atomizing flows”. 2026.
+  <a href="https://hal.science/hal-05673253" target="_blank" rel="noopener noreferrer">HAL-05673253<a>.
   </li>
 </ul>
 
